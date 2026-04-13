@@ -1,0 +1,12 @@
+# OpenFlow Governance — CODEOWNERS
+# All changes require review from a founder before merging to main.
+# Reference: https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners
+
+# Global ownership — founders review everything
+* @pasha13
+
+# Governance core files — double protection
+/docs/         @pasha13
+/protocols/    @pasha13
+LICENSE.md     @pasha13
+README.md      @pasha13
