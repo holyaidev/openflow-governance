@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@700&family=Source+Sans+3:wght@300;400&display=swap');
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    width: 1280px;
+    height: 640px;
+    overflow: hidden;
+    background: #0a1f0f;
+    font-family: 'Source Sans 3', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 60px 80px;
+    position: relative;
+  }
+
+  /* Background texture */
+  body::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: 
+      radial-gradient(ellipse 80% 60% at 70% 50%, rgba(34,100,50,0.35) 0%, transparent 70%),
+      radial-gradient(ellipse 50% 80% at 10% 80%, rgba(180,30,30,0.15) 0%, transparent 60%);
+    pointer-events: none;
+  }
+
+  /* Grid lines */
+  body::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: 
+      linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+    background-size: 60px 60px;
+    pointer-events: none;
+  }
+
+  .left {
+    position: relative;
+    z-index: 2;
+    max-width: 640px;
+  }
+
+  .tag {
+    display: inline-block;
+    background: rgba(34,139,60,0.2);
+    border: 1px solid rgba(34,139,60,0.5);
+    color: #4ade80;
+    font-size: 13px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    padding: 6px 16px;
+    border-radius: 2px;
+    margin-bottom: 28px;
+  }
+
+  h1 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 88px;
+    line-height: 0.95;
+    color: #ffffff;
+    letter-spacing: -2px;
+    margin-bottom: 24px;
+  }
+
+  h1 span {
+    color: #4ade80;
+  }
+
+  .tagline {
+    font-size: 20px;
+    color: rgba(255,255,255,0.55);
+    font-weight: 300;
+    letter-spacing: 0.5px;
+    margin-bottom: 40px;
+    line-height: 1.5;
+    max-width: 480px;
+  }
+
+  .pills {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+
+  .pill {
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.12);
+    color: rgba(255,255,255,0.7);
+    font-size: 12px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    padding: 8px 16px;
+    border-radius: 100px;
+  }
+
+  .pill.red {
+    border-color: rgba(220,60,60,0.4);
+    color: #f87171;
+    background: rgba(220,60,60,0.08);
+  }
+
+  .right {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .logo-ring {
+    width: 260px;
+    height: 260px;
+    border-radius: 52px;
+    background: linear-gradient(145deg, #1a4a20, #0d2810);
+    border: 2px solid rgba(74,222,128,0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 80px rgba(34,139,60,0.3), inset 0 0 40px rgba(0,0,0,0.5);
+    overflow: hidden;
+  }
+
+  /* SVG Eye Logo */
+  .eye-svg {
+    width: 200px;
+    height: 200px;
+  }
+
+  .repo-url {
+    font-size: 14px;
+    color: rgba(74,222,128,0.6);
+    letter-spacing: 1px;
+    font-family: 'Courier New', monospace;
+  }
+
+  .axiom {
+    position: absolute;
+    bottom: 40px;
+    left: 80px;
+    right: 80px;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 1px solid rgba(255,255,255,0.08);
+    padding-top: 20px;
+  }
+
+  .axiom-text {
+    font-size: 13px;
+    color: rgba(255,255,255,0.3);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+
+  .axiom-quote {
+    font-size: 13px;
+    color: rgba(74,222,128,0.5);
+    font-style: italic;
+  }
+</style>
+</head>
+<body>
+
+  <div class="left">
+    <div class="tag">Independent AI Governance</div>
+    <h1>OPEN<span>FLOW</span></h1>
+    <p class="tagline">AI · Human · Legal Flow.<br>Sovereign. Transparent. Zero single authority.</p>
+    <div class="pills">
+      <div class="pill">Monitor App</div>
+      <div class="pill">SafeNet</div>
+      <div class="pill red">OpenCut</div>
+      <div class="pill">Verified ID</div>
+      <div class="pill red">Hell Bird</div>
+    </div>
+  </div>
+
+  <div class="right">
+    <div class="logo-ring">
+      <!-- Inline SVG recreation of OpenFlow logo concept -->
+      <svg class="eye-svg" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+        <!-- Green swirl background -->
+        <circle cx="100" cy="100" r="95" fill="none" stroke="rgba(74,222,128,0.15)" stroke-width="2"/>
+        <!-- Swirl strokes -->
+        <path d="M 30 60 Q 100 10 170 60 Q 200 100 170 140 Q 100 190 30 140 Q 0 100 30 60" fill="none" stroke="rgba(74,222,128,0.4)" stroke-width="3"/>
+        <path d="M 45 70 Q 100 30 155 70 Q 180 100 155 130 Q 100 170 45 130 Q 20 100 45 70" fill="none" stroke="rgba(74,222,128,0.25)" stroke-width="2"/>
+        <!-- Red chat bubble / eye container -->
+        <ellipse cx="100" cy="95" rx="55" ry="38" fill="#c0392b"/>
+        <!-- Chat bubble tail -->
+        <polygon points="85,133 100,118 115,133" fill="#c0392b"/>
+        <!-- Eye white -->
+        <ellipse cx="100" cy="95" rx="42" ry="28" fill="#111"/>
+        <!-- Iris -->
+        <circle cx="100" cy="95" r="20" fill="#1a0000"/>
+        <!-- Highlight -->
+        <circle cx="108" cy="88" r="7" fill="white" opacity="0.9"/>
+        <circle cx="114" cy="84" r="3" fill="white" opacity="0.6"/>
+      </svg>
+    </div>
+    <div class="repo-url">github.com/holyaidev/openflow-governance</div>
+  </div>
+
+  <div class="axiom">
+    <span class="axiom-text">Initiated by HolyAI · Bangladesh 🇧🇩</span>
+    <span class="axiom-quote">"DNA + AI = Complete"</span>
+  </div>
+
+</body>
+</html>
